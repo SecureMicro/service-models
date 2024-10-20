@@ -1,0 +1,24 @@
+{
+  "name": "@secure-micro/models",
+  "version": "1.0.0",
+  "description": "ORM models for SecureMicro",
+  "main": "./build/index.js",
+  "types": "./build/index.d.ts",
+  "files": [
+    "build/**/*"
+  ],
+  "scripts": {
+    "build": "rimraf ./build && tsc",
+    "deploy": "npm run build && npm version patch && npm publish"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "reflect-metadata": "^0.2.2",
+    "typeorm": "^0.3.20"
+  },
+  "devDependencies": {
+    "@types/node": "^22.7.7",
+    "typescript": "^5.6.3"
+  }
+}
