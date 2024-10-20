@@ -1,6 +1,6 @@
 {
   "name": "@secure-micro/models",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "ORM models for SecureMicro",
   "main": "./build/index.js",
   "types": "./build/index.d.ts",
