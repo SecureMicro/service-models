@@ -1,6 +1,6 @@
 {
   "name": "@secure-micro/models",
-  "version": "1.0.1",
+  "version": "1.0.0",
   "description": "ORM models for SecureMicro",
   "main": "./build/index.js",
   "types": "./build/index.d.ts",
@@ -9,7 +9,7 @@
   ],
   "scripts": {
     "build": "rimraf ./build && tsc",
-    "deploy": "npm run build && npm version patch && npm publish"
+    "deploy": "npm run build && npm version patch && npm publish --access public"
   },
   "author": "",
   "license": "ISC",
