@@ -9,7 +9,7 @@
   ],
   "scripts": {
     "build": "rimraf ./build && tsc",
-    "deploy": "npm run build && npm version patch && npm publish --access public"
+    "deploy": "npm run build && npm version patch && npm publish"
   },
   "author": "",
   "license": "ISC",
