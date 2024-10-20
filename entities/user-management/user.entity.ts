@@ -3,7 +3,7 @@ import { BaseEntity } from "../base.entity";
 import { UserGender } from "../../enums";
 
 @Entity("user")
-@Index("user_phone_number_index", ["phone_number"], {
+@Index("user_phone_number_index", ["phoneNumber"], {
   unique: true,
   where: "deleted_at IS NULL",
 })
