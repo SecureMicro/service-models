@@ -1,6 +1,7 @@
-import { Column, Entity, Index } from "typeorm";
+import { Column, Entity, Index, OneToMany } from "typeorm";
 import { BaseEntity } from "../base.entity";
 import { UserGender } from "../../enums";
+import { RefreshTokenEntity } from "./refreshToken.entity";
 
 @Entity("user")
 @Index("user_phone_number_index", ["phoneNumber"], {
@@ -78,4 +79,7 @@ export class UserEntity extends BaseEntity {
     name: "is_details_added",
   })
   isDetailsAdded!: boolean;
+
+  @OneToMany(() => RefreshTokenEntity, (refreshToken) => refreshToken.user)
+  refreshTokens!: RefreshTokenEntity[];
 }
