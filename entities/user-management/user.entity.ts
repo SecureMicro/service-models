@@ -45,6 +45,14 @@ export class UserEntity extends BaseEntity {
   @Column({
     type: "varchar",
     length: 255,
+    name: "password",
+    nullable: false,
+  })
+  password!: string;
+
+  @Column({
+    type: "varchar",
+    length: 255,
     nullable: true,
     name: "profile_image",
   })
