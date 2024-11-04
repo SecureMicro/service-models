@@ -17,6 +17,7 @@ export class UserEntity extends BaseEntity {
     type: "varchar",
     length: 255,
     name: "country_code",
+    nullable: true,
   })
   countryCode!: string;
 
@@ -24,6 +25,7 @@ export class UserEntity extends BaseEntity {
     type: "varchar",
     length: 255,
     name: "phone_number",
+    nullable: true
   })
   phoneNumber!: string;
 
