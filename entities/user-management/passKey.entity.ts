@@ -19,6 +19,14 @@ export class PassKeyEntity extends BaseEntity {
   @Column({
     type: "varchar",
     length: 255,
+    name: "challenge",
+    nullable: false,
+  })
+  challenge!: string;
+
+  @Column({
+    type: "varchar",
+    length: 255,
     name: "webauthn_user_id",
     nullable: false,
   })
