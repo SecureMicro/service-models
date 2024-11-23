@@ -2,6 +2,7 @@ import { Column, Entity, Index, OneToMany } from "typeorm";
 import { BaseEntity } from "../base.entity";
 import { UserGender } from "../../enums";
 import { RefreshTokenEntity } from "./refreshToken.entity";
+import { PassKeyEntity } from "./passKey.entity";
 
 @Entity("user")
 @Index("user_phone_number_index", ["phoneNumber"], {
@@ -36,6 +37,14 @@ export class UserEntity extends BaseEntity {
     nullable: false,
   })
   fullName!: string;
+
+  @Column({
+    type: "varchar",
+    length: 255,
+    name: "user_name",
+    nullable: false,
+  })
+  userName!: string;
 
   @Column({
     type: "varchar",
@@ -84,4 +93,7 @@ export class UserEntity extends BaseEntity {
 
   @OneToMany(() => RefreshTokenEntity, (refreshToken) => refreshToken.user)
   refreshTokens!: RefreshTokenEntity[];
+
+  @OneToMany(() => PassKeyEntity, (passKey) => passKey.user)
+  passKeys!: PassKeyEntity[];
 }
